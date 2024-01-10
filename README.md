@@ -2,7 +2,7 @@
 
 [![CMS Evolution](https://img.shields.io/badge/CMS-Evolution-brightgreen.svg)](https://github.com/evocms-community/evolution) ![PHP version](https://img.shields.io/badge/PHP->=v8.1-green.svg?php=8.1) [![Documentation](https://img.shields.io/badge/Documentation-in%20process-yellow)](https://github.com/0test/lessons-evolution-company)
 
-Демо: XXX
+Демо: http://democompany.kazunin.ru/
 
 Курс для начинающих, порог входа — знать html/css/php.
 Не бояться командной строки.
