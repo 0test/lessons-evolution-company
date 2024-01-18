@@ -448,6 +448,9 @@ class AboutController extends BaseController
 
 ![pb rdy ](assets/images/s101.png) 
 
+**Идея**
+Представьте, что мы сделали такие лендинги для страниц товаров или услуг, чтобы красиво презентовать их посетителю.
+
 ## Полезные ссылки <a name="part5"></a>
 
 * Офигенное видео про [PageBuilder](https://www.youtube.com/watch?v=g6cA-fWVGxg) от SashaBeep, которое иллюстрирует всю эту статью и явилось источником вдохновения.
