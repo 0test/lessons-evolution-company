@@ -90,7 +90,7 @@
 21. [Полезные мелочи в Evolution CMS](/021_Полезные%20мелочи.md)
     
 ---
-Готовый сайт по этому курсу вы можете скачать на [гитхабе](https://github.com/0test/lessons-evolution-company).
+Готовый сайт по этому курсу вы можете скачать на [гитхабе](https://github.com/0test/evocompany.localhost).
 
 Демо-версию сайта посмотреть по адресу [democompany.kazunin.ru](http://democompany.kazunin.ru/).
 
