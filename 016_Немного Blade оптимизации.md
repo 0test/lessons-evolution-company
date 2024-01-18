@@ -3,6 +3,7 @@
 Я обнаружил, что имеются `main.blade.php`, `catalog.blade.php` и `catalog_group.blade.php`, в которых содержится абсолютно одинаковая разметка товара. 
 
 Сделайте  файл `views\parts\product.blade.php` - копию разметки любого товара из лент.
+
 ```html
 <div class="col mb-5">
     <div class="card h-100">
@@ -25,6 +26,7 @@
     </div>
 </div>
 ```
+
 И теперь в файлах `main.blade.php`, `catalog.blade.php` и `catalog_group.blade.php` просто замените этот код на include.
 Для примера `catalog.blade.php`:
 
@@ -40,7 +42,7 @@
                     <h1 class="pb-4">Каталог продукции</h1>
                     <div class="row py-2 gx-4 gx-lg-5 row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center">
                         @foreach ($products as $product)
-                        @include('parts.product')
+                            @include('parts.product')
                         @endforeach
                     </div>
                     <div class="row py-2 gx-5">
@@ -90,10 +92,10 @@
 </section>
 ```
 
----
-Итого:
+## Итого:
 - На сайте стало чуть меньше одинаковой "лапши" из верстки
+
 ---
 
-Что касается контента -- практически вся информация на сайте выводится автоматически, остались мелочи.
+Что касается контента - практически вся информация на сайте выводится автоматически, остались мелочи.
 Давайте поработаем с блоками [на главной странице и на странице контактов](/017_Главная%20страница,%20страница%20Контакты.md).
