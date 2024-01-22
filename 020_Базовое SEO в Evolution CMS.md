@@ -100,27 +100,26 @@ evo()->documentObject
 
 Есть простой и сложный способ сделать карту. Сложный разбирался в [курсе по созданию блога](https://github.com/0test/lessons-evolution-blog), так что теперь, для разнообразия, выберем простой.
 
-1. Создаём в админке шаблон "xmlsitemap". Назначаем ему псевдоним `xmlsitemap`.
-2. Создаём сразу `/views/xmlsitemap.blade.php` блейд-шаблон.
+1. Создаём в админке шаблон "sitemap". Назначаем ему псевдоним `sitemap`.
+2. Создаём сразу `/views/sitemap.blade.php` блейд-шаблон.
 3. Создаём ресурс "sitemap.xml", выбираем ему шаблон из п.1. Не забудьте снять чекбокс "Показывать в меню", прикрепите ТВ `sitemap_exclude` и проставьте в "Отображение в sitemap" - "Скрыть".
 4. У ресурса в поле "Тип содержимого" выберите text/xml
-5. Создаём контроллер `XmlSitemapController`.
+5. Создаём контроллер `SitemapController`.
    
 ```php
 <?php
-
 namespace EvolutionCMS\Main\Controllers;
-class XmlSitemapController extends BaseController
+class SitemapController extends BaseController
 {
     public function setData()
     {
-        $sitemap = evo()->runSnippet('DLSitemap', [
-        ]);
+        $sitemap = evo()->runSnippet('DLSitemap', [],0,'sitemap');
         $this->data['sitemap'] = $sitemap;
     }
 }
+
 ```
-6. В шаблоне `views\xmlsitemap.blade.php` пишем просто `{!! $sitemap !!}`. Никаких наследований, ничего. Просто сырые данные для отображения
+6. В шаблоне `views\sitemap.blade.php` пишем просто `{!! $sitemap ?? '' !!}`. Никаких наследований, ничего. Просто сырые данные для отображения
 
 ![xml](assets/images/s103.png)
 
