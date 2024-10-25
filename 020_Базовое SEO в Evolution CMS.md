@@ -113,8 +113,9 @@ class SitemapController extends BaseController
 {
     public function setData()
     {
-        $sitemap = evo()->runSnippet('DLSitemap', [],0,'sitemap');
-        $this->data['sitemap'] = $sitemap;
+     $this->data['sitemap'] = evo()->runSnippet('DLSitemap', [
+        'filters' => 'AND(tvd:sitemap_exclude:isnot:1)'
+     ]);
     }
 }
 
